@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ThemeProvider } from "styled-components";
 import App from './App';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { theme } from './styles/theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme = {theme}>
+      <ToastContainer autoClose = {3000} className = "toast-container"/>
+       <App />
+    </ThemeProvider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
