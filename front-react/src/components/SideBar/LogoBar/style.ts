@@ -6,7 +6,7 @@ export const WrapperLogoBar = styled.aside`
 
   align-items: center;
   justify-content: center;
-  border-bottom: solid 0.3rem ${({ theme }) => theme.colors.background};
+  border-bottom: solid 0.3rem ${({ theme }) => theme.colors.gray};
   background-color: ${({ theme }) => theme.colors.secondary};
 
   & > a {

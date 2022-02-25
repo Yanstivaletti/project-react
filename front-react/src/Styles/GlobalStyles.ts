@@ -11,7 +11,7 @@ export default createGlobalStyle`
     font-size: 62.5%;
 
     min-height: 100vh;
-    background: #ebedef;
+    background: ${({ theme }) => theme.colors.background};
   }
 
   body {

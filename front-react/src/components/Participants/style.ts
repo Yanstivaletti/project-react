@@ -10,11 +10,11 @@ export const WrapperReadme = styled.div`
 
   div {
     width: 100%;
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    background-color: ${({ theme }) => theme.colors.background};
   }
 
   img {

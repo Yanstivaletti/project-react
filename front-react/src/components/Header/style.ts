@@ -27,7 +27,7 @@ export const WrapperHeader = styled.header`
     h1 {
       font-size: 3rem;
       font-weight: 500;
-      color: ${({ theme }) => theme.colors.secondary};
+      color: ${({ theme }) => theme.colors.text};
     }
   }
 

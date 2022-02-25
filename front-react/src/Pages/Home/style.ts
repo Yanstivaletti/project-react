@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const WrapperContentHome = styled.div`
   box-shadow: none;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export const Div = styled.div`

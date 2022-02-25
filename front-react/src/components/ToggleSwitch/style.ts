@@ -37,11 +37,11 @@ export const Button = styled.label`
   > svg:last-child {
     font-size: 3.2rem;
     padding-right: 0.4rem;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: #c83b67;
   }
   > svg:first-child {
     font-size: 3rem;
     padding-left: 0.4rem;
-    color: ${({ theme }) => theme.colors.secondary};
+    color: #c83b67;
   }
 `;
