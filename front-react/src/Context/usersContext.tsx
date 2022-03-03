@@ -10,17 +10,17 @@ import React, {
 import { IUsers, User } from '../domain/Users';
 import { userService } from '../Service/users';
 
+type Stacks = {
+  language: string;
+  framework: string
+}
+
 type InputDataUser = {
   id?: number;
-  name: string;
+  nome: string;
   email: string;
   telefone: string;
-  stacks: [
-    {
-      languages: string;
-      framework: string;
-    },
-  ];
+  stacks: Array<Stacks>
 };
 
 type UserContextType = {
@@ -44,7 +44,8 @@ export const UserContext = createContext({} as UserContextType);
 const UsersProvider = ({ children }: UserContextProviderProps) => {
   const [users, setUsers] = useState([]);
   const [inputForm, setInputForm] = useState({
-    name: '',
+    id: '',
+    nome: '',
     email: '',
     telefone: '',
     stacks: [
@@ -52,7 +53,7 @@ const UsersProvider = ({ children }: UserContextProviderProps) => {
         language: '',
         framework: '',
       },
-    ],
+    ]
   });
   const [isChange, setIsChange] = useState(false);
   const [darkTheme, setDarkTheme] = useState(false);

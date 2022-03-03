@@ -1,9 +1,14 @@
+type Stacks = {
+  language: string;
+  framework: string
+}
+
 export type User = {
   id: number;
-  name: string;
+  nome: string;
   email: string;
   telefone: string;
-  stacks: [{ languages: string; framework: string }];
+  stacks: Array<Stacks>;
 };
 
 export interface IUsers {
@@ -14,10 +19,10 @@ export const initialState: IUsers = {
   users: [
     {
       id: 0,
-      name: '',
+      nome: '',
       email: '',
       telefone: '',
-      stacks: [{ languages: '', framework: '' }],
+      stacks: [{ language: '', framework: '' }],
     },
   ],
 };

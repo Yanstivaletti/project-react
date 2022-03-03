@@ -5,10 +5,11 @@ export class Api {
 
   constructor() {
     const api: AxiosInstance = axios.create({
-      baseURL: `${process.env.REACT_APP_API_URL}`,
+      baseURL: `http://localhost:3333`,
     });
 
     this.api = api;
+    console.log(api)
   }
 
   myHeader() {

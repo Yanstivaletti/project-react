@@ -15,7 +15,6 @@ export const ListUsers = styled.section`
   justify-self: center;
 
   margin-top: ${({ theme }) => theme.spacing.tight};
-  height: ${({ theme }) => theme.spacing.loose};
   width: 90%;
   background: ${({ theme }) => theme.colors.primary};
   border-radius: ${({ theme }) => theme.borderRadius.small};
