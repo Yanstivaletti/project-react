@@ -6,14 +6,18 @@ export interface ModalProps {
   open?: boolean;
   onClose?: () => void;
   modalContent?: JSX.Element;
-  iconClose?: boolean
+  iconClose?: boolean;
+  widthContent?: string
+  heightContent?: string
 }
 
 export const Modal: React.FC<ModalProps> = ({
   open,
   onClose,
   modalContent,
-  iconClose
+  iconClose,
+  widthContent,
+  heightContent
 }) => {
   const wrapper = useRef<HTMLDivElement>(null);
   const icon = useRef(null);
@@ -37,7 +41,7 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <S.Overlay ref={wrapper} open={open}>
-      <S.Content>
+      <S.Content widthContent={widthContent} heightContent={heightContent} >
         {iconClose && (
           <S.ContainerIconClose onClick={onClose}>
             <IoMdClose color='#000' size={'2.5rem'} />

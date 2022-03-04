@@ -1,36 +1,52 @@
 {
   "users": [
-      {
-          "id": 1,
-          "nome": "Tony",
-          "email": "tony@mail.com",
-          "telefone": 999999,
-          "stacks": [
-              {
-                  "language": "Java Script",
-                  "framework": "VueJS"
-              },
-              {
-                  "language": "Node",
-                  "framework": "NestJS"
-              }
-          ]
-      },
-      {
-          "id": 2,
-          "nome": "Frank",
-          "email": "frank@mail.com",
-          "telefone": 999999,
-          "stacks": [
-              {
-                  "language": "Java",
-                  "framework": "Spring Boot"
-              },
-              {
-                  "language": "Pyton",
-                  "framework": "Django"
-              }
-          ]
-      }
+    {
+      "id": 1,
+      "nome": "Tony",
+      "email": "tony@mail.com",
+      "telefone": 999999,
+      "stacks": [
+        {
+          "language": "Java Script",
+          "framework": "VueJS"
+        },
+        {
+          "language": "Node",
+          "framework": "NestJS"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Frank",
+      "email": "frank@mail.com",
+      "telefone": 999999,
+      "stacks": [
+        {
+          "language": "Java",
+          "framework": "Spring Boot"
+        },
+        {
+          "language": "Pyton",
+          "framework": "Django"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Quiterio",
+      "email": "asd@gmail.con",
+      "telefone": "79999366970",
+      "stacks": [
+        {
+          "language": "Java",
+          "framework": "Spring Boot"
+        },
+        {
+          "language": "Python",
+          "framework": "Django"
+        }
+      ]
+    }
   ]
 }

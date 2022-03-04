@@ -9,7 +9,6 @@ export class Api {
     });
 
     this.api = api;
-    console.log(api)
   }
 
   myHeader() {

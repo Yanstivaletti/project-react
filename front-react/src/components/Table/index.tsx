@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaPencilAlt, FaTrash } from 'react-icons/fa';
 import { User } from '../../domain/Users';
-import { userService } from '../../Service/users';
 import { theme } from '../../Styles/Dark';
 import { WrapperTable } from './style';
 
@@ -9,29 +8,15 @@ type RowsBodyTableProps = {
   users: any;
   setInputForm: any;
   setIsChange: any
+  handleDeleteUser: (id: number) => void
+  handleUpdateUser: (id: number) => void
 }
 
 type TableProps = RowsBodyTableProps & {
   items: Array<String>
 }
 
-function RowsBodyTable({ users, setInputForm, setIsChange }: RowsBodyTableProps): JSX.Element {
-  function handleDeleteUser(id: number) {
-    userService.deleteUser(`/users/${id}`);
-    setIsChange(true);
-  }
-
-  async function handleUpdateUser(id: number) {
-    const response = await userService.getUserById(`/users/${id}`);
-    setInputForm({
-      id: response.data.id,
-      nome: response.data.nome,
-      email: response.data.email,
-      telefone: response.data.telefone,
-      stack: response.data.stack,
-    });
-  }
-
+function RowsBodyTable({ users, handleDeleteUser, handleUpdateUser }: RowsBodyTableProps): JSX.Element {
   return (
     <>
       {users && users.map((user: User) => {
@@ -65,7 +50,14 @@ function RowsBodyTable({ users, setInputForm, setIsChange }: RowsBodyTableProps)
   );
 }
 
-export function Table({ items, users, setInputForm, setIsChange }: TableProps): JSX.Element {
+export function Table({
+  items,
+  users,
+  setInputForm,
+  setIsChange,
+  handleDeleteUser,
+  handleUpdateUser
+}: TableProps): JSX.Element {
   return (
     <WrapperTable>
       <thead>
@@ -80,6 +72,8 @@ export function Table({ items, users, setInputForm, setIsChange }: TableProps): 
           users={users}
           setInputForm={setInputForm}
           setIsChange={setIsChange}
+          handleDeleteUser={handleDeleteUser}
+          handleUpdateUser={handleUpdateUser}
         />
       </tbody>
     </WrapperTable>

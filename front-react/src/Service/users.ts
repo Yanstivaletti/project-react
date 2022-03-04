@@ -1,6 +1,11 @@
 import { User } from '../domain/Users';
 import { Api } from './api';
 
+type Stacks = {
+  language: string;
+  framework: string;
+}
+
 class ProductService extends Api {
   /**
    * @author Tony Silva
@@ -28,10 +33,10 @@ class ProductService extends Api {
   async saveUser(
     url: string,
     params: {
-      name: string;
+      nome: string;
       email: string;
       telefone: string;
-      stacks: [{ languages: string; framework: string }];
+      stacks: Array<Stacks>;
     },
   ) {
     const config = this.myHeader();
@@ -42,9 +47,9 @@ class ProductService extends Api {
     return response;
   }
 
-  async updateUser(url: string, params: User) {
+  async updateUser(url: string, id: number, params: User) {
     const config = this.myHeader();
-    const response = await this.api.put(`${url}`, params, {
+    const response = await this.api.put(`${url}/${id}`, params, {
       ...config,
     });
 
