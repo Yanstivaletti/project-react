@@ -36,6 +36,7 @@ export const WrapperHeader = styled.header`
       font-weight: ${({ theme }) => theme.font.weights.light};
       font-size: ${({ theme }) => theme.font.sizes.small};
       margin-top: ${({ theme }) => theme.spacing.extraTight};
+      color: ${({ theme }) => theme.colors.text};
     }
   }
 `;

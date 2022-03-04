@@ -1,4 +1,3 @@
-import React from 'react';
 import { WrapperHeader } from './style';
 import { HeaderProps } from './types';
 

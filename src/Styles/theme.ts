@@ -64,13 +64,13 @@ export const LightTheme = {
 export const DarkTheme = {
   colors: {
     primary: '#81324A',
-    secondary: '#28121A',
-    gray: '#7D7379',
+    secondary: '#2B111B',
+    gray: '#1A1215',
     error: '#dc3545',
     warning: '#ffc107',
     info: '#75d2f1',
     success: '#20c997',
-    background: '#332826',
+    background: '#2B111B',
     white: '#e1e1e1',
     text: '#eaeaea',
   },

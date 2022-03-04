@@ -21,3 +21,21 @@ export const ListUsers = styled.section`
   padding: ${({ theme }) => theme.spacing.tight};
   box-shadow: ${({ theme }) => theme.shadow.shadow1};
 `;
+
+export const WrapperButton = styled.button`
+
+  background-color: ${({ theme }) => theme.colors.secondary};
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 25px;
+  color: ${({ theme }) => theme.colors.text};
+
+`;
+export const WrapperInput = styled.input`
+  background-color: ${({ theme }) => theme.colors.secondary};
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 25px;
+  color: ${({ theme }) => theme.colors.text};
+
+`;

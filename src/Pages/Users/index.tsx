@@ -1,19 +1,17 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import React, { useState } from 'react';
-import { FaUsers } from 'react-icons/fa';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { AiOutlinePhone } from "react-icons/ai";
+import { FaUserCircle, FaUsers } from 'react-icons/fa';
+import { HiOutlineMail } from "react-icons/hi";
+import * as yup from "yup";
 import { Header } from '../../components/Header';
 import Input from '../../components/Input';
 import Modal from '../../components/Modal';
 import { Table } from '../../components/Table';
 import { useMyUsers } from '../../Context/usersContext';
-import { WrapperContentUsers } from './style';
-import { ListUsers } from './style';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
-import { SubmitHandler, useForm } from 'react-hook-form'
 import { userService } from '../../Service/users';
-import { FaUserCircle } from "react-icons/fa"
-import {HiOutlineMail} from "react-icons/hi"
-import {AiOutlinePhone} from "react-icons/ai"
+import { ListUsers, WrapperButton, WrapperContentUsers } from './style';
 
 type CreateFormTypes = {
   nome: string
@@ -124,21 +122,21 @@ const App: React.FC = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <Input<CreateFormTypes>
           name="nome"
-          placeholder="Nome"
+          placeholder=" Nome "
           startIcon={<FaUserCircle color='#000' />}
           register={register}
           errors={errors}
         />
         <Input<CreateFormTypes>
           name="email"
-          placeholder="Email"
+          placeholder=" Email "
           startIcon={<HiOutlineMail color='#000' />}
           register={register}
           errors={errors}
         />
         <Input<CreateFormTypes>
           name="telefone"
-          placeholder="Telefone"
+          placeholder=" Telefone "
           startIcon={<AiOutlinePhone color='#000' />}
           register={register}
           errors={errors}
@@ -148,29 +146,29 @@ const App: React.FC = () => {
           name="language"
           register={register}
           errors={errors}
-          placeholder="Linguagem"
+          placeholder=" Linguagem "
         />
         <Input<CreateFormTypes>
           name="framework"
           register={register}
           errors={errors}
-          placeholder="Framework"
+          placeholder=" Framework "
         />
 
         <Input<CreateFormTypes>
           name="secondLanguage"
           register={register}
           errors={errors}
-          placeholder="Linguagem"
+          placeholder=" Linguagem "
         />
         <Input<CreateFormTypes>
           name="secondFramework"
           register={register}
           errors={errors}
-          placeholder="Framework"
+          placeholder=" Framework "
         />
 
-        <button style={{ cursor: 'pointer' }} type="submit">Enviar</button>
+        <WrapperButton style={{ cursor: 'pointer' }} type="submit">Enviar</WrapperButton>
       </form>
     </>
   )
@@ -180,10 +178,10 @@ const App: React.FC = () => {
       <Header MyIcon={FaUsers} title="Usuários" subtitle="Todos os usuários" />
       <ListUsers>
         <Modal open={isOpenModal} onClose={handleClickOpenModal} modalContent={modalContent} iconClose={true} widthContent={'420px'} />
-        <button style={{ alignSelf: 'end' }} onClick={() => {
+        <WrapperButton style={{ alignSelf: 'end' }} onClick={() => {
           handleClickOpenModal();
           setCreateOrUpdate('create');
-        }}>Teste</button>
+        }}>Adicionar</WrapperButton>
         <Table
           items={itemsHeaderTable}
           users={users}

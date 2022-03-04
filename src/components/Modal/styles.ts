@@ -29,7 +29,7 @@ export const Content = styled.div<ModalProps>`
     height: ${heightContent};
     max-width: calc(100% - 20px);
     width: ${widthContent};
-    background-color: #FFF;
+    background-color: ${({ theme }) => theme.colors.primary};
     padding: 30px;
     position: fixed;
     border-radius: 8px;

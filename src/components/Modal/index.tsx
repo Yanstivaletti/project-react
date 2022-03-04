@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import { IoMdClose } from 'react-icons/io'
-import * as S from './styles'
+import React, { useEffect, useRef } from 'react';
+import { IoMdClose } from 'react-icons/io';
+import * as S from './styles';
 
 export interface ModalProps {
   open?: boolean;
