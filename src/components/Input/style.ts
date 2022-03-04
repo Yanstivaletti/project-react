@@ -105,17 +105,16 @@ export const EndIcon = styled.div<EndIconProps>`
 
 export const MessageError = styled.span`
   ${({ theme }) => css`
-    color: #F00;
-    font-size: 16px;
-    margin: 5px 0 0 5px;
-  `}
-`
+  color: #FFF;
+  font-size: 16px;
+  margin: 1rem 0 1rem 0.6rem;
+`}`
 
 export const ErrorMessageValidation = styled.span`
   ${({ theme }) => css`
-    margin: 0.4rem 0 0 0.4rem;
-    color: #F00;
-    font-size: 16px;
-    line-height: 1rem;
+  margin: 0.8rem 0 0.8rem 0.6rem;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 1rem;
   `}
 `
