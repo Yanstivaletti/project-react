@@ -5,6 +5,7 @@ export const WrapperLink = styled.li`
   align-items: baseline;
   justify-content: flex-start;
   margin-top: ${({ theme }) => theme.spacing.tight};
+  margin: 10px;
 
   &:hover {
     & > a {
@@ -35,4 +36,6 @@ export const WrapperLink = styled.li`
   }
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+
+`;
