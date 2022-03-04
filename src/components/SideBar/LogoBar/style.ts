@@ -15,18 +15,18 @@ export const WrapperLogoBar = styled.aside`
     justify-content: center;
     padding: ${({ theme }) => theme.spacing.none};
 
-    svg {
-      width: 11rem;
+    img {
+      width: 8rem;
     }
   }
 
   @media (max-width: 576px) {
-    width: 100vw;
+    width: 100%;
 
     & > a {
-      svg {
+      img {
         display: flex;
-        width: 12rem;
+        width: 8rem;
       }
     }
   }

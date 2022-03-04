@@ -18,7 +18,7 @@ export const WrapperReadme = styled.div`
   }
 
   img {
-    width: ${({ theme }) => theme.spacing.loose};
+    width: 20%;
     border-radius: 50%;
     box-shadow: ${({ theme }) => theme.shadow.shadow1};
   }

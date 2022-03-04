@@ -12,7 +12,7 @@ export const WrapperMenuBar = styled.aside`
   background: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: 576px) {
-    width: 100vw;
+    width: 100%;
     box-shadow: 0 0.3rem 0.7rem #00000040;
     z-index: 1;
 

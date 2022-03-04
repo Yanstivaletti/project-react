@@ -4,7 +4,9 @@ import { WrapperLogoBar } from './style';
 const LogoBar: React.FC = () => {
   return (
     <WrapperLogoBar>
-     <img src = {logo}/>
+      <a href="/">
+        <img src={logo} alt="Logo" />
+      </a>
     </WrapperLogoBar>
   );
 };

@@ -13,7 +13,7 @@ export const WrapperHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.gray};
 
   @media (max-width: 576px) {
-    width: 100vw;
+    width: 100%;
   }
 
   & > div:first-child {
